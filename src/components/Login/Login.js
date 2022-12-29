@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 
-function Login() {
+const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
@@ -12,7 +12,7 @@ function Login() {
         login({ username, password })
     }
 
-    if (user) {
+    if(user) {
         return (
             <div>
                 <h1>Logout</h1>
@@ -26,9 +26,9 @@ function Login() {
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
                 username:
-                <input value={username} onChange={(e) => setUsername(e.target.value)} />
+                <input value={username} onChange={(e) => setUsername(e.target.value)}/>
                 password:
-                <input value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <button type='submit'>Login</button>
             </form>
         </div>

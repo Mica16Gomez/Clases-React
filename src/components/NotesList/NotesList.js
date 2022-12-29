@@ -1,5 +1,5 @@
-
 import Note from "../Note/Note"
+import { memo } from 'react'
 
 const NotesList = ({ notes }) => {
     return (
@@ -13,4 +13,4 @@ const NotesList = ({ notes }) => {
     )
 }
 
-export default NotesList
+export default memo(NotesList)
